@@ -42,7 +42,7 @@ while True:
         reportes.generar_reporte()
 
     elif opcion =="7":
-        reportes.auditoria_estados()
+        reportes.revisar_estados_libros()
 
     elif opcion == "8":
         salir = input("¿Quieres salir del programa Si/No: ").capitalize()
