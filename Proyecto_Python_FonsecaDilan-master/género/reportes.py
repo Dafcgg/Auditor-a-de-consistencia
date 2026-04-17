@@ -1,7 +1,8 @@
 import json
 import os
 from gestion_libros import cargar
-
+from config import RUTA_REPORTE_LIBROS
+from config import RUTA_INFORME_LIBROS
 def generar_reporte():
     libros = cargar()
 
@@ -45,7 +46,7 @@ def generar_reporte():
             "libros": reporte[genero]
         })
 
-        with open("género/data/reportes/reporte_libros_2026.json", "w", encoding="utf-8") as file:
+        with open("RUTA_REPORTE_LIBROS", "w", encoding="utf-8") as file:
             json.dump(libros, file, indent=4, ensure_ascii=False)
 
     print("-Reporte guardado en data/reportes/reporte_libros_2026.json\n")
@@ -107,7 +108,7 @@ def revisar_estados_libros():
     }
 
    
-    with open("género/data/reportes/informe_revision_libros.json", "w", encoding="utf-8") as archivo:
+    with open("RUTA_INFORME_LIBROS", "w", encoding="utf-8") as archivo:
         json.dump(informe_final, archivo, indent=4, ensure_ascii=False)
 
     print(" Informe generado en data/reportes/informe_revision_libros.json")

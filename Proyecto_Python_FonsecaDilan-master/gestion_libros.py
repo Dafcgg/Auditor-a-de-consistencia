@@ -1,16 +1,16 @@
 import json
-
+from config import RUTA_LIBROS
 
 def cargar():
     try:
-        with open("género/data/libros.json", "r", encoding="utf-8") as archivo:
+        with open("RUTA_LIBROS", "r", encoding="utf-8") as archivo:
             return json.load(archivo)
     except:
         return []
 
 
 def guardar(libros):
-    with open("género/data/libros.json", "w", encoding="utf-8") as file:
+    with open("RUTA_LIBROS", "w", encoding="utf-8") as file:
         json.dump(libros, file, indent=4, ensure_ascii=False)
 
 def registrar():
